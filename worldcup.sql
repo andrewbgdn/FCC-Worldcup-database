@@ -88,7 +88,7 @@ ALTER SEQUENCE public.games_game_id_seq OWNED BY public.games.game_id;
 
 CREATE TABLE public.teams (
     team_id integer NOT NULL,
-    name character varying(255)
+    name character varying(255) NOT NULL
 );
 
 
@@ -196,6 +196,10 @@ INSERT INTO public.teams VALUES (21, 'Nigeria');
 INSERT INTO public.teams VALUES (22, 'Algeria');
 INSERT INTO public.teams VALUES (23, 'Greece');
 INSERT INTO public.teams VALUES (24, 'United States');
+INSERT INTO public.teams VALUES (25, 'team_name1');
+INSERT INTO public.teams VALUES (26, 'team_name2');
+INSERT INTO public.teams VALUES (27, '...');
+INSERT INTO public.teams VALUES (28, 'team_name24');
 
 
 --
@@ -209,7 +213,7 @@ SELECT pg_catalog.setval('public.games_game_id_seq', 32, true);
 -- Name: teams_team_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.teams_team_id_seq', 24, true);
+SELECT pg_catalog.setval('public.teams_team_id_seq', 28, true);
 
 
 --
